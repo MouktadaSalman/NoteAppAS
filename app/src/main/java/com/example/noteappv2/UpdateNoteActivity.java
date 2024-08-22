@@ -13,7 +13,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class AddNoteActivity extends AppCompatActivity {
+public class UpdateNoteActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +22,13 @@ public class AddNoteActivity extends AppCompatActivity {
 
         EditText editText = findViewById(R.id.textView);
         Button saveButton = findViewById(R.id.saveButton);
+
+        Intent intent = getIntent();
+        String note = intent.getStringExtra("NOTE");
+
+
+        editText.setText(note);
+        saveButton.setText("Update");
 
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
