@@ -23,11 +23,11 @@ public class UpdateNoteActivity extends AppCompatActivity {
         EditText editText = findViewById(R.id.textView);
         Button saveButton = findViewById(R.id.saveButton);
 
-        Intent intent = getIntent();
-        String note = intent.getStringExtra("NOTE");
-
+        Intent gIntent = getIntent();
+        String note = gIntent.getStringExtra("NOTE");
 
         editText.setText(note);
+
         saveButton.setText("Update");
 
         saveButton.setOnClickListener(new View.OnClickListener() {

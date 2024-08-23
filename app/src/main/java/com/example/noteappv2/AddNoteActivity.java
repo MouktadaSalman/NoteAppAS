@@ -23,6 +23,7 @@ public class AddNoteActivity extends AppCompatActivity {
         EditText editText = findViewById(R.id.textView);
         Button saveButton = findViewById(R.id.saveButton);
 
+
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
